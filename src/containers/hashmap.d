@@ -94,7 +94,7 @@ struct HashMap(K, V, Allocator = Mallocator, alias hashFunction = generateHash!K
 	/**
 	 * Supports $(B aa[key]) syntax.
 	 */
-	auto opIndex(this This)(K key)
+	auto ref opIndex(this This)(K key)
 	{
 		import std.conv : text;
 
